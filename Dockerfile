@@ -17,6 +17,7 @@ ARG GOPHISH_VERSION="0.11.0-cisa.1"
 # We need ca-certificates, unzip, and wget to pull down a copy of
 # gophish.
 ###
+USER root
 RUN apt-get update && apt-get install -y --no-install-recommends ca-certificates unzip wget
 
 
