@@ -1,6 +1,7 @@
 # Official Docker images are in the form library/<app> while non-official
 # images are in the form <user>/<app>.
-FROM docker.io/library/debian:bullseye-slim AS compile-stage
+FROM docker.io/library/debian:bookworm-slim AS cisa-gophish
+
 
 ###
 # Unprivileged user variables
