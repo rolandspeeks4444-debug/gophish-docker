@@ -70,7 +70,9 @@ ENV DEPS="ca-certificates libsqlite3-dev sqlite3"
 RUN apt update
 RUN apt install --quiet --quiet --yes \
     --no-install-recommends --no-install-suggests \
-    $DEPS
+USER root
+RUN apt-get update && apt-get install -y --no-install-recommends ca-certificates unzip wget
+
 
 COPY bin/get-api-key ${SCRIPT_DIR}
 
